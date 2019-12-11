@@ -48,7 +48,7 @@ mayor=mayorEstrictoDeTres(nro1,nro2,nro3)
 if mayor != -1:
     print("El mayor numero es: ", mayor, "!")
 else:
-    print("No existe un numero mayor entre los tres! : ")
+    print("No existe un numero mayor entre los tres! :( ")
 
 """
    ____________________________________________________________________________________________________
@@ -59,14 +59,14 @@ else:
                 En 3 de las 6 permutaciones posibles, a > b y en las otras 3, a < b.
                 A su vez, en ambos casos, existen 2 posibilidades de permutar c .
                 En base a esa lógica, se puede diagramar el algoritmo que determina
-                cuáles son las 2 primeras posiciones.
+                cuáles son las 2 primeras posiciones("pri" y "seg").
                 Es necesario saberlas para luego verificar que el mayor sea estricto.
                 
                 La tercera posición no importa, porque permitimos que existan 2 menores iguales. 
                 
                 El resultado que devuelve la funcion siempre es -1.
                 Pero si "pri" y "seg" son distintos, significa que hay un mayor estricto y, 
-                solo en este caso, resultado toma el valor de "pri".
+                sólo en este caso, resultado toma el valor de "pri".
    ____________________________________________________________________________________________________
 
                                                                                                         """
