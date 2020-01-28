@@ -5,7 +5,7 @@ LIC. CARLOS THOMPSON
 
 PYTHON 3+
 
-Prerrequisitos: Tres secuencias basicas(secuencias condicionl y ciclo).
+Prerrequisitos: Tres secuencias basicas(secuencias condicional y ciclo).
                 Funciones y parametros. Arreglos(listas o vectores).
                 Metodos de ordenamiento(burbujeo seleccion o insercion).
                 Busqueda secuencial y binaria.
@@ -20,12 +20,8 @@ HASTA 5 FALTAS !!!!!!
 
 ########################################################################
 
-
-
-
-
-
-
+Resumir PPT.
+Imprimir guia de ejercicios.
 
 
 """
