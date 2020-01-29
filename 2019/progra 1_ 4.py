@@ -20,16 +20,17 @@
 
 def viajero(a,b):
     res=0
+    a20=20*a
+    a30desc20=10*((a/100)*80)
+    a40desc30=10*((a/100)*70)
     if b<=20:
         res=a*b
+    elif b<=30:
+        res=a20+((b-20)*((a/100)*80))
+    elif b<=40:
+        res=a20+a30desc20+((b-30)*((a/100)*70))
     else:
-        if b<=30:
-            res=(20*a)+((b-20)*((a/100)*80))
-        else:
-            if b<=40:
-                res=(20*a)+((10*((a/100)*80)))+((b-30)*((a/100)*70))
-            else:
-                res=(20*a)+((10*((a/100)*80)))+(10*((a/100)*70))+((b-40)*((a/100)*60))
+        res=a20+a30desc20+a40desc30+((b-40)*((a/100)*60))
     return res
     
 
@@ -39,7 +40,7 @@ viajes=0
 while valor<=0:
     valor=float(input("Ingrese el valor del viaje: "))
 while viajes<=0:
-    viajes=int(input("Ingrese la cantidad de viajes: "))
+    viajes=float(input("Ingrese la cantidad de viajes: "))
 total=viajero(valor, viajes)
 print("El total es: ", total)
 
