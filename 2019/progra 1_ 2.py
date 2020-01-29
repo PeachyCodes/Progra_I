@@ -22,10 +22,10 @@ def positivo():
 def Gregorio(a,b,c):
     boole=True
     añobi=False
-    if c%4 == 0 and (c%100 == 0 and c%400 == 0):
+    if (c%4 == 0 and c%100 == 0) or (c%400 == 0):
         añobi=True
     if b <= 12 and (a <= 31):
-        if (a == 30 and b%2 == 1) or (a == 31 and b%2 == 0):
+        if (a == 30 and b%2 == 1) or (a == 31 and b%2 == 0):"""corregir acaaaaa!!!! hacer lista con meses de 31 o 30 y citarla!!!"""
             boole=False
         if b == 2 and (a >= 28):
             boole=False
