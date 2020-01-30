@@ -1,0 +1,57 @@
+"""1. Desarrollar cada una de las siguientes funciones y escribir un programa que permita
+      verificar su funcionamiento imprimiendo la lista luego de invocar a cada función:
+            a.Cargar una lista con números al azar de cuatro dígitos.La cantidad de elementos
+            también será un número al azar de dos dígitos.
+            b.Calcular y devolver la sumatoria de todos los elementos de la lista anterior.
+            c.Eliminar todas las apariciones de un valor en la lista anterior.
+            El valor a eliminar se ingresa desde el teclado y la función lo recibe como parámetro.
+            d.Determinar si el contenido de una lista cualquiera es capicúa,
+            sin usar listas auxiliares. Un ejemplo de lista capicúa es [50, 17, 91, 17, 50]. """
+
+# f u n c i o n e s 
+import random
+
+def listex():
+    """Crea lista de n(dos digitos) cantidad de emlementos con numeros de 4 cifras"""
+    l=[]
+    for i in range (random.randint(10,99)):
+        n=random.randint(1000,9999)
+        l.append(n)
+    return l
+
+def sumex(l):
+    """Devuelve la suma de los elementos de la lista"""
+    suma=sum(l)
+    return suma
+
+def repetidox(l):
+    """Busca un valor en la lista ingresado por el usuario y lo elimina"""
+    m=int(input("Ingrese numero a verificar: "))
+    while m not in l:
+        m=int(input("Ingrese numero a verificar: "))
+    while m in l:
+        l.remove(m)
+    return l
+
+def capicuax(l):
+    """Verifica si una lista es capicua"""
+    capicua=True
+    a=0
+    b=len(l)-1
+    while a<b:
+        if l[a] != l[b]:
+            capicua=False
+            break
+        a=a+1
+        b=b-1
+    return capicua
+        
+# p r o g r a m a 
+lista=listex()
+print(lista)
+lista_sumada=sumex(lista)
+print(lista_sumada)
+lista_sin_repetidos=repetidox(lista)
+print(lista_sin_repetidos)
+lista_capicua=capicuax(lista)
+print(lista_capicua)
