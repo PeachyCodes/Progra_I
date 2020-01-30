@@ -12,7 +12,7 @@
 import random
 
 def listex():
-    """Crea lista de n(dos digitos) cantidad de emlementos con numeros de 4 cifras"""
+    """Crea lista de n(dos digitos) cantidad de elementos, con numeros de 4 cifras"""
     l=[]
     for i in range (random.randint(10,99)):
         n=random.randint(1000,9999)
@@ -24,13 +24,10 @@ def sumex(l):
     suma=sum(l)
     return suma
 
-def repetidox(l):
+def repetidox(l,n):
     """Busca un valor en la lista ingresado por el usuario y lo elimina"""
-    m=int(input("Ingrese numero a verificar: "))
-    while m not in l:
-        m=int(input("Ingrese numero a verificar: "))
-    while m in l:
-        l.remove(m)
+    while n in l:
+        l.remove(n)
     return l
 
 def capicuax(l):
@@ -47,11 +44,18 @@ def capicuax(l):
     return capicua
         
 # p r o g r a m a 
+
 lista=listex()
-print(lista)
+print("Lista: ",lista)
+
 lista_sumada=sumex(lista)
-print(lista_sumada)
-lista_sin_repetidos=repetidox(lista)
-print(lista_sin_repetidos)
+print("La suma de los elementos de la lista es: ",lista_sumada)
+
+m=int(input("Ingrese numero a verificar: "))
+while m not in lista:
+    m=int(input("Ingrese numero a verificar: "))
+lista_sin_repetidos=repetidox(lista,m)
+print("La lista sin el repetido es: ",lista_sin_repetidos)
+
 lista_capicua=capicuax(lista)
-print(lista_capicua)
+print("El valor capicua es: ",lista_capicua)
