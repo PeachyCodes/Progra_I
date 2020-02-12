@@ -1,0 +1,40 @@
+def romanex(n):
+    r=("M","D","C","L","X","V","I")
+    r2=(1000,500,100,50,10,5,1)
+    x=[]
+    if n==0:
+        x.append("0")    
+    while n>0:
+        for i in range (len(r)):
+            cant=(r[i])*(n//(r2[i]))
+            x.append(cant)
+            n=n%r2[i]
+        #4
+        if x[-1] == "IIII":
+            x[-1]="IV"
+        #9
+        if x[-1]=="IV" and x[-2]=="V":
+            x[-1]="IX"
+            x[-2]=""
+        #40
+        if x[-3]=="XXXX":
+            x[-3]="XL"
+        #90
+        if x[-4]=="L" and x[-3]=="XL":
+            x[-4]=""
+            x[-3]="XC"
+        #400
+        if x[-5]=="CCCC":
+            x[-5]="CD"
+        #900
+        if x[-6]=="D" and x[-5]=="CD":
+            x[-6]=""
+            x[-5]="CM"
+    return x
+
+num=int(input("Ingrese numero (0-3999): "))
+while 0>num or num>3999:
+    print("Error: Numero fuera de rango.")
+    num=int(input("Ingrese numero (0-3999): "))
+res="".join(romanex(num))
+print(res)
