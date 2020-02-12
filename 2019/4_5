@@ -1,0 +1,14 @@
+# falta b y c
+
+def busca_n_string(n,s):
+    k=[]
+    x=s.split()
+    for i in range (len(x)):
+        if len(x[i]) >= n:
+            k.append(x[i])
+    return k
+
+cadena="' We are what we repitedly do. Excellence, then, is not an act but a habit ' . - S o c r a t e s"
+num=7
+res=busca_n_string(num,cadena)
+print(res)
