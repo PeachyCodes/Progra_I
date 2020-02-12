@@ -1,0 +1,9 @@
+def printex(x):
+    esp=(80-(len(x)))//2
+    if len(x) % 2 == 0:
+        print(" "*esp, x," "*esp)
+    else:
+        print(" "*esp, x ," "*(esp+1))    
+
+cadena='"Pili es lo mas" - SOCRATES.'
+printex(cadena)
