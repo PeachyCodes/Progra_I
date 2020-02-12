@@ -1,0 +1,12 @@
+def capicuex(s):
+    boole=True
+    for i in range (len(s)):
+        if s[i] != s[-i-1]:
+            boole=False
+            break
+    return boole
+
+cadena1="ojo x ojo!"
+cadena2="neuquen"
+print(capicuex(cadena1),capicuex(cadena2))
+    
