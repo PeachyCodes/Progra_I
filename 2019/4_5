@@ -1,14 +1,40 @@
-# falta b y c
+# falta b
 
-def busca_n_string(n,s):
+def cadenax():
+    """Crea cadena de caracteres sin signos de puntuación"""
+    s=input("Ingrese frase: ")
+    signos="'.,:;?!"
+    s2=""
+    for i in s:
+        if i not in signos:
+            s2=s2+i
+    s3=s2.upper()
+    return s3
+
+def busca_n_string_A(n,s):
     k=[]
     x=s.split()
     for i in range (len(x)):
         if len(x[i]) >= n:
             k.append(x[i])
-    return k
+    k2=" , ".join(k)
+    return k2
 
-cadena="' We are what we repitedly do. Excellence, then, is not an act but a habit ' . - S o c r a t e s"
-num=7
-res=busca_n_string(num,cadena)
-print(res)
+def busca_n_string_B(n,s):
+    s2=s.split(" ")
+    s3=[i for i in s2 if len(i)>=n]
+    s4=" , ".join(s3)
+    return s4
+
+def busca_n_string_C(n,s):
+    aux=s.split()
+    k=" , ".join(filter(lambda x: len(x)>=n,aux))
+    return k
+    
+cadena=cadenax()
+num=int(input("Ingrese cantidad de caracteres minima: "))
+while num<=0:
+    print("Error: Ingrese una cantidad positiva ")
+    num=int(input("Ingrese cantidad de caracteres minima"))
+
+print(busca_n_string_A(num,cadena),"///",busca_n_string_B(num,cadena),"///",busca_n_string_C(num,cadena))
