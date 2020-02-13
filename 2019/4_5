@@ -1,5 +1,3 @@
-# falta b
-
 def cadenax():
     """Crea cadena de caracteres sin signos de puntuación"""
     s=input("Ingrese frase: ")
