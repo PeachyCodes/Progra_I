@@ -1,0 +1,14 @@
+s="Ojo1 con los orozco son ocho los monos yo los conozco no los soporto"
+f="ojo"
+string=s.lower()
+to_find=s.lower()
+largo=0
+for i in string:
+    largo+=1
+encontrados=0
+a=string.find(to_find)
+while a != -1:
+    k=a
+    encontrados+=1
+    a=string.find(to_find,k+1,largo)
+print (encontrados)
