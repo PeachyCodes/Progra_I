@@ -1,14 +1,16 @@
-s="Ojo1 con los orozco son ocho los monos yo los conozco no los soporto"
-f="ojo"
-string=s.lower()
-to_find=s.lower()
-largo=0
-for i in string:
-    largo+=1
+s="auto auto"
+f="ao"
+
+string=list("".join(s.lower()))
+to_find=list("".join(f.lower()))
+
 encontrados=0
-a=string.find(to_find)
-while a != -1:
-    k=a
-    encontrados+=1
-    a=string.find(to_find,k+1,largo)
+indice=0
+
+for letra in string:
+    if letra==to_find[indice]:
+        indice+=1
+        if indice==len(to_find):
+            encontrados+=1
+            indice=0
 print (encontrados)
