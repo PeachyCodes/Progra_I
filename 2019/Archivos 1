@@ -1,0 +1,30 @@
+try:
+    entrada=open("d:\usuarios\Udabe\Desktop\archivos_ej_1","rt")
+    salida=open(r"d:\usuarios\Udabe\Desktop\archivos_ej_1_piola","wt")
+    for linea in entrada:
+        if "#" not in linea:
+            salida.write(linea)           
+except FileNotFoundError as mensaje:
+    print("No se puede abrir el archivo: ", mensaje)
+except OSError as mensaje:
+    print("ERROR: ", mensaje)
+else:
+    print("Copia sin comentarios finalizada!")
+finally:
+    try:
+        entrada.close()
+        salida.close()
+    except NameError:
+        pass
+        
+        
+        
+        
+#file
+#funcion
+def printex:
+	"""Imprime archivo"""
+	for i in range (3):
+		print("La verdad es subjetiva") """no necesita return"""
+#programa
+res=printex()
