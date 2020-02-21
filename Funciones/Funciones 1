@@ -8,14 +8,14 @@ def estricto(a,b,c):
             mayor=b
     return mayor
 
-a=int(input("a: "))
-while (a) <= 0:        
-    a=int(input("a: "))
-b=int(input("b: "))
-while (b) <= 0:        
-    b=int(input("b: "))
-c=int(input("c: "))
-while (c) <= 0:        
-    c=int(input("c: "))
+num1=int(input("num1: "))
+while (num1) <= 0:        
+    num1=int(input("num1: "))
+num2=int(input("num2: "))
+while (num2) <= 0:        
+    num2=int(input("num2: "))
+num3=int(input("num3: "))
+while (num3) <= 0:        
+    num3=int(input("num3: "))
 
-print(estricto(a,b,c))
+print(estricto(num1,num2,num3))
