@@ -1,11 +1,15 @@
 def estricto(a,b,c):
     mayor=c
     if a>b:
-        if a>c:
-            mayor=a
-    else:
+        if a!=b: 
+            if a!=c:
+                if a>c:
+                    mayor=a
+    elif b!=c:
         if b>c:
             mayor=b
+    else:
+        mayor="No existe mayor estricto"
     return mayor
 
 num1=int(input("num1: "))
