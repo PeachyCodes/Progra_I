@@ -1,0 +1,21 @@
+def estricto(a,b,c):
+    mayor=c
+    if a>b:
+        if a>c:
+            mayor=a
+    else:
+        if b>c:
+            mayor=b
+    return mayor
+
+a=int(input("a: "))
+while (a) <= 0:        
+    a=int(input("a: "))
+b=int(input("b: "))
+while (b) <= 0:        
+    b=int(input("b: "))
+c=int(input("c: "))
+while (c) <= 0:        
+    c=int(input("c: "))
+
+print(estricto(a,b,c))
