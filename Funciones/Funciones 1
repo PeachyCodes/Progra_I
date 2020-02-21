@@ -8,11 +8,10 @@ def estricto(a,b,c):
                         mayor=a
                     else:
                         mayor=c
+                elif b>c:
+                    mayor=b
                 else:
-                    if b>c:
-                        mayor=b
-                    else:
-                        mayor=c
+                    mayor=c
             elif a>c:
                 mayor=a
         elif b>c:
