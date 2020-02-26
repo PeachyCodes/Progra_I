@@ -1,7 +1,7 @@
 #RECURSIVIDAD
 
 
-  #1
+  #1 cuenta digitos de un numero
 
 def digitex(x):
     if x > 9:
@@ -10,8 +10,9 @@ def digitex(x):
         return 1
 
 print(digitex(12345))
-
-  #2
+___________________________________________________________________________
+  #2 transforma binario a decimal
+  
 def binariex(n):
     x=str(n)
     if n ==0:
@@ -22,3 +23,48 @@ def binariex(n):
         return binariex(n%(10**(len(x)-1))) + int(x[0])*(2**(len(x)-1))
         
 print(binariex(111))
+______________________________________________________________________________
+  #3 suma enteros entre 0 y n
+ 
+def sumex(n):
+   if n==0:
+       return 0
+   else:
+       return sumex (n-1) + n
+       
+print(sumex(5))
+_________________________________________________________________
+  #4 suma enteros de dos numeros y los multiplica
+
+def sumados(a,b,pra=0,prb=0):
+    if a>0:
+        return sumados(a-1,b,pra+a,prb)
+    elif b>0:
+        return sumados(a,b-1,pra,prb+b)
+    else:
+        return pra*prb
+    
+print(sumados(3,3))
+___________________________________________________________
+  #9 Imprime matriz recursivamente
+
+def matrix(m,c=0):
+    if c<(len(m)):
+        print ("%d"m[c],end="")
+        return matrix(m,c+1)
+
+matriz=[[1,2],[3,4],[5,6],[7,8]]
+matrix(matriz)
+________________________________________________________
+  # producto primo de un numero
+
+def primex(n,d=2,l=[1]):
+    if n==1:
+        return str(l).replace(",", " + ")
+    if n%d==0:
+        l.append(d)
+        return primex(n//d,d)
+    else:
+        return primex (n,d+1)
+
+print(primex(10))
