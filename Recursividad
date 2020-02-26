@@ -12,12 +12,13 @@ def digitex(x):
 print(digitex(12345))
 
   #2
-def binariex(x):
-    if x ==0:
+def binariex(n):
+    x=str(n)
+    if n ==0:
         return 0
-    if x==1:
+    if n==1:
         return 1
     else:
-        '''binariex(x)= (primer elemento)*(2**(largo del numero-1)) + binariex(segundo elemento y subsiguientes) '''
-        return int(str(x)[0])*(2**(len(str(x))-1))+binariex(int(x)%(10**((len(str(x)))-1)))
-print(binariex(1000))
+        return binariex(n%(10**(len(x)-1))) + int(x[0])*(2**(len(x)-1))
+        
+print(binariex(111))
