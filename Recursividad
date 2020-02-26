@@ -1,0 +1,14 @@
+#RECURSIVIDAD
+
+
+  #1
+
+def digitex(x):
+    if x > 9:
+        return digitex(x//10)+1
+    else:
+        return 1
+
+print(digitex(12345))
+
+  #2
