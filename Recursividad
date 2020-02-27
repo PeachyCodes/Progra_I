@@ -68,3 +68,25 @@ def primex(n,d=2,l=[1]):
         return primex (n,d+1)
 
 print(primex(10))
+________________________________________________________________
+  #Devuelve valor maximo de matriz
+  
+def matrix(m,f=0,c=0,biggie=0):
+    fs=len(m)-1
+    cs=len(m[0])-1
+    fila=m[f]
+    columna=fila[c]
+    numero=columna
+    if numero>biggie:
+        biggie=numero
+    if (f==fs and c==cs):
+        return biggie
+    if c==cs:
+        return matrix(m,f+1,c-cs,biggie)
+    elif numero>biggie:
+        return matrix(m,f,c+1,biggie=numero)
+    else:
+        return matrix(m,f,c+1,biggie)
+
+matriz=[[2,3]]
+print(matrix(matriz))
